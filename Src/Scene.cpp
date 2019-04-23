@@ -4,31 +4,36 @@
 //コンストラクタ
 //@param nameシーン名
 Scene::Scene(const char* name) : name(name) {
-
+	std::cout << "Sceneコンストラクタ:" << name << "\n";
 }
 //デスストラクタ
 //@param nameシーン名
 Scene::~Scene() {
 	Finelize();
+	std::cout << "Sceneデスストラクタ:" << name << "\n";
 }
 
 //シーンを活動状態にする
 void Scene::Play() {
 	isActive = true;
+	std::cout << "Scene Play:" << name << "\n";
 }
 
 //シーンを停止状態にする
 void Scene::Stop() {
 	isActive = false;
+	std::cout << "Scene Stop:" << name << "\n";
 }
 
 //シーンを表示する
 void Scene::Show() {
 	isVisible = true;
+	std::cout << "Scene Show:" << name << "\n";
 }
 //シーンを非表示する
 void Scene::Hide() {
 	isVisible = false;
+	std::cout << "Scene Hide:" << name << "\n";
 }
 
 //シーンを取得する
